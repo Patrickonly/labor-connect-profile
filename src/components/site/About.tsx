@@ -85,7 +85,7 @@ export function About() {
             <Reveal type="fadeUp">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1578496479932-143e3768f467?auto=format&fit=crop&q=80&w=1200"
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200"
                   alt="African workers in professional training"
                   className="h-112.5 w-full rounded-3xl object-cover shadow-xl"
                 />

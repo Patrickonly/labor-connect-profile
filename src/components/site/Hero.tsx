@@ -1,4 +1,3 @@
-import heroImg from "@/assets/hero-workforce.jpg";
 import { Link } from "@tanstack/react-router";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
@@ -116,8 +115,8 @@ export function Hero() {
           >
             <div className="relative mt-3 overflow-hidden rounded-3xl shadow-lift">
               <img
-                src={heroImg}
-                alt="Professional trained workforce"
+                src="https://images.unsplash.com/photo-1581093588451-319a0c09f4e8?auto=format&fit=crop&q=80&w=1200"
+                alt="Professional African trained workforce"
                 width={1200}
                 height={800}
                 className="h-125 w-full rounded-3xl object-cover"
