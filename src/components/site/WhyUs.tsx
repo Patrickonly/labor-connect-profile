@@ -21,9 +21,9 @@ export function WhyUs() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {points.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 0.08}>
-              <div className="group flex h-full items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cta/10">
-                  <p.icon className="h-5 w-5 text-cta" />
+              <div className="group card-premium flex h-full items-start gap-4 rounded-2xl p-6">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cta/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-cta group-hover:text-cta-foreground">
+                  <p.icon className="h-5 w-5 text-cta transition-colors duration-300 group-hover:text-cta-foreground" />
                 </span>
                 <div className="min-w-0">
                   <h3 className="text-base font-bold text-foreground">{p.title}</h3>
