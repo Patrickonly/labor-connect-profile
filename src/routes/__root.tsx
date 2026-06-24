@@ -77,16 +77,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Labor Connect Solutions Ltd — Trusted Workforce Solutions in Rwanda" },
+      {
+        name: "description",
+        content:
+          "Labor Connect Solutions Ltd provides trained, reliable workforce solutions in Rwanda — cleaning, logistics, machine operators, hospitality, healthcare support and general labor outsourcing.",
+      },
+      { name: "author", content: "Labor Connect Solutions Ltd" },
+      { property: "og:title", content: "Labor Connect Solutions Ltd" },
+      {
+        property: "og:description",
+        content: "Connecting businesses with skilled, trained workers in Rwanda and beyond.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
