@@ -8,7 +8,7 @@ const stats = [
   { value: 500, suffix: "+", label: "Trained Workers" },
   { value: 50, suffix: "+", label: "Partner Companies" },
   { value: 9, suffix: "+", label: "Service Categories" },
-  { value: 10, suffix: "+", label: "Years Experience" },
+  { value: 2, suffix: "+", label: "Years Experience" },
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {

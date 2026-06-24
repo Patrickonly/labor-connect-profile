@@ -67,7 +67,7 @@ export function ExecutiveSummary() {
               <span>Kicukiro, Kigali, Rwanda</span>
             </div>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Founded over 5 years ago, the company bridges the gap between skilled workers and the
+              Founded over 2 years ago, the company bridges the gap between skilled workers and the
               industries that need them across Rwanda and beyond. Every worker undergoes rigorous
               training before deployment, ensuring clients receive industry-ready professionals from
               day one.

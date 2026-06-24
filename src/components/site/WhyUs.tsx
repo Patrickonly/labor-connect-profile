@@ -18,7 +18,7 @@ const stats = [
   { value: 98, suffix: "%", label: "Client Satisfaction Rate", icon: Award },
   { value: 24, suffix: "h", label: "Average Response Time", icon: Clock },
   { value: 500, suffix: "+", label: "Companies Served", icon: Building },
-  { value: 5, suffix: "+", label: "Years of Excellence", icon: Users },
+  { value: 2, suffix: "+", label: "Years of Excellence", icon: Users },
 ];
 
 const advantages = [

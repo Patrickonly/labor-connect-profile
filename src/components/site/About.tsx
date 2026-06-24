@@ -85,12 +85,12 @@ export function About() {
             <Reveal type="fadeUp">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200"
-                  alt="Workers in professional training"
+                  src="https://images.unsplash.com/photo-1578496479932-143e3768f467?auto=format&fit=crop&q=80&w=1200"
+                  alt="African workers in professional training"
                   className="h-112.5 w-full rounded-3xl object-cover shadow-xl"
                 />
                 <div className="absolute -bottom-6 -left-6 rounded-2xl bg-cta p-6 text-cta-foreground shadow-xl">
-                  <div className="text-4xl font-extrabold">10+</div>
+                  <div className="text-4xl font-extrabold">2+</div>
                   <div className="text-sm font-medium">Years of Excellence</div>
                 </div>
               </div>
