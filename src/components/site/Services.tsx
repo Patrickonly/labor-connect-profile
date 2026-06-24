@@ -36,9 +36,9 @@ export function Services() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={(i % 3) * 0.08}>
-              <div className="group h-full rounded-2xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 transition-colors group-hover:bg-accent/20">
-                  <s.icon className="h-6 w-6 text-accent" />
+              <div className="group card-premium h-full rounded-2xl p-7">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground">
+                  <s.icon className="h-6 w-6 text-accent transition-colors duration-300 group-hover:text-accent-foreground" />
                 </span>
                 <h3 className="mt-5 text-lg font-bold text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
