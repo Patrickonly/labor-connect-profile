@@ -1,5 +1,4 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -68,28 +67,28 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #fcfcfc;
-  --foreground: #1c2e3a;
-  --card: #ffffff;
-  --card-foreground: #1c2e3a;
-  --popover: #ffffff;
-  --popover-foreground: #1c2e3a;
-  --primary: #25455c;
-  --primary-foreground: #fcfcfc;
-  --secondary: #eef2f5;
-  --secondary-foreground: #25455c;
-  --muted: #eef2f5;
-  --muted-foreground: #5d7081;
-  --accent: #335035;
-  --accent-foreground: #fcfcfc;
-  --cta: #bd7217;
-  --cta-foreground: #ffffff;
-  --cta-hover: #a5610f;
+  --background: oklch(0.991 0 0);
+  --foreground: oklch(0.175 0.031 245.904);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.175 0.031 245.904);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.175 0.031 245.904);
+  --primary: oklch(0.329 0.059 246.538);
+  --primary-foreground: oklch(0.991 0 0);
+  --secondary: oklch(0.954 0.008 247.881);
+  --secondary-foreground: oklch(0.329 0.059 246.538);
+  --muted: oklch(0.954 0.008 247.881);
+  --muted-foreground: oklch(0.556 0.04 244.903);
+  --accent: oklch(0.372 0.066 130.873);
+  --accent-foreground: oklch(0.991 0 0);
+  --cta: oklch(0.68 0.195 37.5);
+  --cta-foreground: oklch(1 0 0);
+  --cta-hover: oklch(0.6 0.18 37);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: #e2e8ed;
-  --input: #e2e8ed;
-  --ring: #25455c;
+  --border: oklch(0.907 0.012 247.885);
+  --input: oklch(0.907 0.012 247.885);
+  --ring: oklch(0.329 0.059 246.538);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -138,6 +137,9 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --footer-background: oklch(0.2 0.03 260);
+  --footer-foreground: oklch(0.97 0.004 248);
+  --footer-border: oklch(0.35 0.02 258 / 0.6);
 }
 
 @layer base {
@@ -150,15 +152,21 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: var(--font-display);
   }
 }
 
 @utility glass-nav {
   background: color-mix(in srgb, var(--background) 70%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
   backdrop-filter: blur(14px) saturate(160%);
   border-bottom: 1px solid color-mix(in srgb, var(--primary) 10%, transparent);
 }
@@ -172,9 +180,10 @@ html {
 :root {
   --shadow-soft: 0 1px 2px rgba(28, 46, 58, 0.04), 0 8px 24px -12px rgba(28, 46, 58, 0.12);
   --shadow-lift: 0 20px 48px -20px rgba(37, 69, 92, 0.32);
-  --shadow-cta: 0 14px 32px -12px rgba(189, 114, 23, 0.55);
-  --gradient-hero: linear-gradient(160deg, #25455c 0%, #1c2e3a 55%, #142430 100%);
-  --gradient-cta: linear-gradient(135deg, #d68427 0%, #bd7217 55%, #a5610f 100%);
+  --shadow-cta: 0 6px 20px -6px rgba(189, 114, 23, 0.48);
+  --footer-background: oklch(0.25 0.04 253);
+  --footer-foreground: oklch(0.97 0.004 248);
+  --footer-border: oklch(0.42 0.03 253 / 0.5);
 }
 
 @utility shadow-soft {
@@ -184,50 +193,82 @@ html {
   box-shadow: var(--shadow-lift);
 }
 @utility card-premium {
-  background: var(--card);
-  border: 1px solid color-mix(in srgb, var(--primary) 8%, transparent);
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 9%, transparent);
   box-shadow: var(--shadow-soft);
   transition:
-    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.4s ease;
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lift);
-    border-color: color-mix(in srgb, var(--cta) 35%, transparent);
+    border-color: color-mix(in srgb, var(--cta) 38%, transparent);
   }
 }
 @utility btn-cta {
-  background: var(--gradient-cta);
+  background: var(--cta);
   color: var(--cta-foreground);
   box-shadow: var(--shadow-cta);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
   &:hover {
     transform: translateY(-2px);
-    filter: brightness(1.05);
+    background: var(--cta-hover);
+    box-shadow: 0 10px 28px -8px rgba(189, 114, 23, 0.52);
   }
 }
-@utility text-gradient-cta {
-  background: var(--gradient-cta);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+@utility text-cta {
+  color: var(--cta);
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
 }
 @keyframes shimmer-bar {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 @utility animate-float {
   animation: float-slow 6s ease-in-out infinite;
 }
 
+@utility surface-glass {
+  background: color-mix(in srgb, var(--background) 78%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 12%, transparent);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+@utility focus-ring {
+  &:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--cta) 75%, white 10%);
+    outline-offset: 2px;
+  }
+}
+
+@utility footer-surface {
+  background: var(--footer-background);
+  color: var(--footer-foreground);
+  border-top: 1px solid var(--footer-border);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }

@@ -9,12 +9,72 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhyUsRouteImport } from './routes/why-us'
+import { Route as TrainingRouteImport } from './routes/training'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SocialImpactRouteImport } from './routes/social-impact'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TheProblemRouteImport } from './routes/the-problem'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as ExecutiveSummaryRouteImport } from './routes/executive-summary'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CareerRouteImport } from './routes/career'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WhyUsRoute = WhyUsRouteImport.update({
+  id: '/why-us',
+  path: '/why-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainingRoute = TrainingRouteImport.update({
+  id: '/training',
+  path: '/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SocialImpactRoute = SocialImpactRouteImport.update({
+  id: '/social-impact',
+  path: '/social-impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheProblemRoute = TheProblemRouteImport.update({
+  id: '/the-problem',
+  path: '/the-problem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExecutiveSummaryRoute = ExecutiveSummaryRouteImport.update({
+  id: '/executive-summary',
+  path: '/executive-summary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareerRoute = CareerRouteImport.update({
+  id: '/career',
+  path: '/career',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +85,184 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/career': typeof CareerRoute
+  '/contact': typeof ContactRoute
+  '/executive-summary': typeof ExecutiveSummaryRoute
+  '/industries': typeof IndustriesRoute
+  '/the-problem': typeof TheProblemRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/social-impact': typeof SocialImpactRoute
+  '/training': typeof TrainingRoute
+  '/why-us': typeof WhyUsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/career': typeof CareerRoute
+  '/contact': typeof ContactRoute
+  '/executive-summary': typeof ExecutiveSummaryRoute
+  '/industries': typeof IndustriesRoute
+  '/the-problem': typeof TheProblemRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/social-impact': typeof SocialImpactRoute
+  '/training': typeof TrainingRoute
+  '/why-us': typeof WhyUsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/career': typeof CareerRoute
+  '/contact': typeof ContactRoute
+  '/executive-summary': typeof ExecutiveSummaryRoute
+  '/industries': typeof IndustriesRoute
+  '/the-problem': typeof TheProblemRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/social-impact': typeof SocialImpactRoute
+  '/training': typeof TrainingRoute
+  '/why-us': typeof WhyUsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/career'
+    | '/contact'
+    | '/executive-summary'
+    | '/industries'
+    | '/the-problem'
+    | '/services'
+    | '/sitemap.xml'
+    | '/social-impact'
+    | '/training'
+    | '/why-us'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/about'
+    | '/career'
+    | '/contact'
+    | '/executive-summary'
+    | '/industries'
+    | '/the-problem'
+    | '/services'
+    | '/sitemap.xml'
+    | '/social-impact'
+    | '/training'
+    | '/why-us'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/career'
+    | '/contact'
+    | '/executive-summary'
+    | '/industries'
+    | '/the-problem'
+    | '/services'
+    | '/sitemap.xml'
+    | '/social-impact'
+    | '/training'
+    | '/why-us'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CareerRoute: typeof CareerRoute
+  ContactRoute: typeof ContactRoute
+  ExecutiveSummaryRoute: typeof ExecutiveSummaryRoute
+  IndustriesRoute: typeof IndustriesRoute
+  TheProblemRoute: typeof TheProblemRoute
+  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SocialImpactRoute: typeof SocialImpactRoute
+  TrainingRoute: typeof TrainingRoute
+  WhyUsRoute: typeof WhyUsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/why-us': {
+      id: '/why-us'
+      path: '/why-us'
+      fullPath: '/why-us'
+      preLoaderRoute: typeof WhyUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/training': {
+      id: '/training'
+      path: '/training'
+      fullPath: '/training'
+      preLoaderRoute: typeof TrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/social-impact': {
+      id: '/social-impact'
+      path: '/social-impact'
+      fullPath: '/social-impact'
+      preLoaderRoute: typeof SocialImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-problem': {
+      id: '/the-problem'
+      path: '/the-problem'
+      fullPath: '/the-problem'
+      preLoaderRoute: typeof TheProblemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/executive-summary': {
+      id: '/executive-summary'
+      path: '/executive-summary'
+      fullPath: '/executive-summary'
+      preLoaderRoute: typeof ExecutiveSummaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/career': {
+      id: '/career'
+      path: '/career'
+      fullPath: '/career'
+      preLoaderRoute: typeof CareerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,8 +277,28 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CareerRoute: CareerRoute,
+  ContactRoute: ContactRoute,
+  ExecutiveSummaryRoute: ExecutiveSummaryRoute,
+  IndustriesRoute: IndustriesRoute,
+  TheProblemRoute: TheProblemRoute,
+  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SocialImpactRoute: SocialImpactRoute,
+  TrainingRoute: TrainingRoute,
+  WhyUsRoute: WhyUsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
