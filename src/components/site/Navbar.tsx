@@ -58,7 +58,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#contact"
-            className="hidden rounded-lg bg-cta px-4 py-2 text-sm font-semibold text-cta-foreground shadow-sm transition-colors hover:bg-cta-hover lg:inline-block"
+            className="hidden btn-cta rounded-lg px-4 py-2 text-sm font-semibold lg:inline-block"
           >
             Request Workforce
           </a>

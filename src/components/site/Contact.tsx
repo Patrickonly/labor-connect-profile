@@ -49,7 +49,7 @@ export function Contact() {
               <input className={fieldClass} placeholder="Email address" type="email" />
               <input className={`${fieldClass} sm:col-span-2`} placeholder="Service needed" />
               <textarea className={`${fieldClass} sm:col-span-2`} rows={4} placeholder="Your message" />
-              <button className="rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-foreground transition-colors hover:bg-cta-hover sm:col-span-2">
+              <button className="btn-cta rounded-xl px-6 py-3.5 text-sm font-semibold sm:col-span-2">
                 Request Workforce
               </button>
             </form>

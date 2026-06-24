@@ -59,7 +59,7 @@ export function Career() {
                     onChange={(e) => setFileName(e.target.files?.[0]?.name ?? null)}
                   />
                 </label>
-                <button className="rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-foreground transition-colors hover:bg-cta-hover">
+                <button className="btn-cta rounded-xl px-6 py-3.5 text-sm font-semibold">
                   Submit Application
                 </button>
               </div>
