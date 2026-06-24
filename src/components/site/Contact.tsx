@@ -43,7 +43,7 @@ export function Contact() {
           <Reveal delay={0.1} className="lg:col-span-3">
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="grid gap-4 rounded-2xl border border-border bg-card p-7 shadow-sm sm:grid-cols-2"
+              className="grid gap-4 card-premium rounded-2xl p-7 sm:grid-cols-2"
             >
               <input className={fieldClass} placeholder="Full name" />
               <input className={fieldClass} placeholder="Email address" type="email" />

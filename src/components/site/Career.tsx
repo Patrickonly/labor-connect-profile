@@ -20,7 +20,7 @@ export function Career() {
         />
         <div className="grid gap-8 lg:grid-cols-2">
           <Reveal>
-            <div className="rounded-2xl border border-border bg-card p-7 shadow-sm">
+            <div className="card-premium rounded-2xl p-7">
               <h3 className="text-lg font-bold text-foreground">Browse Job Categories</h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {categories.map((c) => (
@@ -38,7 +38,7 @@ export function Career() {
           <Reveal delay={0.1}>
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="rounded-2xl border border-border bg-card p-7 shadow-sm"
+              className="card-premium rounded-2xl p-7"
             >
               <h3 className="flex items-center gap-2 text-lg font-bold text-foreground">
                 <Briefcase className="h-5 w-5 text-cta" /> Apply Now
