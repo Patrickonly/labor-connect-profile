@@ -53,7 +53,7 @@ export function SplashScreen() {
                 width: "0.875rem",
                 height: "0.875rem",
                 borderRadius: "9999px",
-                background: "linear-gradient(135deg, #fb923c, #ea580c)",
+                background: "#fb923c",
                 boxShadow: "0 0 14px 3px rgba(249,115,22,0.55)",
               }}
             />

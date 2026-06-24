@@ -1,3 +1,4 @@
+import aboutUsImage from "@/assets/e6f94e4a-0152-4a3d-8add-35beefe07d0c.png";
 import { Link } from "@tanstack/react-router";
 import { motion, useInView } from "framer-motion";
 import {
@@ -85,8 +86,8 @@ export function About() {
             <Reveal type="fadeUp">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200"
-                  alt="African workers in professional training"
+                  src={aboutUsImage}
+                  alt="Black/African workers in professional training"
                   className="h-112.5 w-full rounded-3xl object-cover shadow-xl"
                 />
                 <div className="absolute -bottom-6 -left-6 rounded-2xl bg-cta p-6 text-cta-foreground shadow-xl">
