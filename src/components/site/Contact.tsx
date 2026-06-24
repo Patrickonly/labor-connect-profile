@@ -43,13 +43,13 @@ export function Contact() {
           <Reveal delay={0.1} className="lg:col-span-3">
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="grid gap-4 rounded-2xl border border-border bg-card p-7 shadow-sm sm:grid-cols-2"
+              className="grid gap-4 card-premium rounded-2xl p-7 sm:grid-cols-2"
             >
               <input className={fieldClass} placeholder="Full name" />
               <input className={fieldClass} placeholder="Email address" type="email" />
               <input className={`${fieldClass} sm:col-span-2`} placeholder="Service needed" />
               <textarea className={`${fieldClass} sm:col-span-2`} rows={4} placeholder="Your message" />
-              <button className="rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-foreground transition-colors hover:bg-cta-hover sm:col-span-2">
+              <button className="btn-cta rounded-xl px-6 py-3.5 text-sm font-semibold sm:col-span-2">
                 Request Workforce
               </button>
             </form>
